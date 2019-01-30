@@ -1,17 +1,37 @@
 // Your code goes here
 
-const colors = ["red", "yellow", "blue", "green", "purple", "orange", "black"];
+const colors = ["red", "black", "yellow", "blue", "green", "purple", "orange"];
 
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  
+
 const html = document.querySelector('html');
 const btn = document.querySelector('.btn');
 const nav = document.querySelector('nav');
+const p = document.querySelector('p');
 
+
+p.addEventListener('copy', e => {
+    e.target.title = "YOU COPYRIGHT INFRINGING SON OF (OR DAUGHTER OF) A BITCH!!!!";
+    e.target.style.background = colors[getRandomInt(2)];
+    for (i = 0; i < 3000; i++){
+        e.target.style.background = "black";
+        console.log("son of a ");
+        e.target.style.background = "red";
+    }
+} );
+
+
+
+html.addEventListener('scroll', e => {
+  console.log(`This is my event: ${e.type}`);
+  e.target.style.background = "pink";
+  e.target.title= "I like it when you scroll me! :0";
+//    e.target.style.background = "rgb(240, 230, 230)";
+});
 
 html.addEventListener('mouseover', e => {
   console.log(`This is my event: ${e.type}`);
